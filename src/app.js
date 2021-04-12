@@ -8,6 +8,8 @@ const forecast = require('./utilse/weathercode')
 const { error } = require('console')
 const app = express()
 
+const port = process.env.PORT || 3000
+
 //difine path
 const pubicDirectoryPath = path.join(__dirname,'../public')
 const viewpath = path.join(__dirname,'../template/views')
@@ -99,6 +101,6 @@ app.get('*', (req,res) => {
 
 
 
-app.listen(3000, () => {
-    console.log('server is ap on port 3000')
+app.listen(port, () => {
+    console.log('server is ap on port ' + port)
 })

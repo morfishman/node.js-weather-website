@@ -15,7 +15,7 @@ weatherform.addEventListener('submit', (event) => {
     const location = serch.value
     massege1.textContent = "loading..."
     massege2.textContent = ""
-    fetch('http://localhost:3000/weathershow?address=' +location).then((Response) => {
+    fetch('/weathershow?address=' +location).then((Response) => {
         Response.json().then((date) => {
             if(date.error){
                 massege2.textContent = date.error
